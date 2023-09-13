@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Person</title>
+</head>
+<body>
+    <h1>Update Person</h1>
+    <form action="/update/{{ person[0] }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ person[1] }}" required>
+        <br>
+        <input type="submit" value="Update">
+    </form>
+    <a href="/">Back to Person List</a>
+</body>
+</html>

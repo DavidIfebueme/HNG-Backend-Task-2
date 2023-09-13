@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Person</title>
+</head>
+<body>
+    <h1>Delete Person</h1>
+    <p>ID: {{ person[0] }}</p>
+    <p>Name: {{ person[1] }}</p>
+    <form action="/delete/{{ person[0] }}" method="post">
+        <input type="submit" value="Delete">
+    </form>
+    <a href="/">Back to Person List</a>
+</body>
+</html>
