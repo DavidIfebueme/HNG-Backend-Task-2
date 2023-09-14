@@ -8,9 +8,10 @@ load_dotenv()
 app = Flask(__name__)
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+print(DATABASE_URL)
 
 def database_connection():
-    connection = psycopg2.connect("DATABASE_URL")
+    connection = psycopg2.connect(DATABASE_URL)
     return connection
 
 @app.route('/persons', methods=['GET'])
