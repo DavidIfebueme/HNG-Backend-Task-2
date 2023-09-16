@@ -11,7 +11,8 @@ app = Flask(__name__)
 #print(DATABASE_URL)
 
 def database_connection():
-    connection = psycopg2.connect("postgres://hng_backend_task_2_user:iomLhKg0X5Lmehvwh0lv6yZ3RmlTnUj6@dpg-ck1p3cfhdsdc73a1a400-a.oregon-postgres.render.com/hng_backend_task_2")
+    connection = psycopg2.connect("postgres://flask_crud_db_gdgc_user:o8ria4ySNngHMSmTOmiZGMeCj2GaQeN2@dpg-ck31sgj6fquc7382p7hg-a.oregon-postgres.render.com/flask_crud_db_gdgc")
+    print("Database connected")
     return connection
 
 @app.route('/persons', methods=['GET'])
