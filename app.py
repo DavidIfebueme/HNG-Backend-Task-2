@@ -1,17 +1,17 @@
 from flask import Flask, request, jsonify
 import psycopg2
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-#load_dotenv()
+load_dotenv()
 
 app = Flask(__name__)
 
-#DATABASE_URL = os.getenv("DATABASE_URL")
-#print(DATABASE_URL)
+DATABASE_URL = os.getenv("DATABASE_URL")
+print(DATABASE_URL)
 
 def database_connection():
-    connection = psycopg2.connect("postgres://flask_crud_db_gdgc_user:o8ria4ySNngHMSmTOmiZGMeCj2GaQeN2@dpg-ck31sgj6fquc7382p7hg-a.oregon-postgres.render.com/flask_crud_db_gdgc")
+    connection = psycopg2.connect(DATABASE_URL)
     print("Database connected")
     return connection
 
